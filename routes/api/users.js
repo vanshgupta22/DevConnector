@@ -22,7 +22,7 @@ async (req , res) => {
 
    const errors = validationResult(req);
    if(!errors.isEmpty()){// it has errors
-    res.status(400).json({errors : errors.array()});
+    return res.status(400).json({errors : errors.array()});
    }
 
    
@@ -35,7 +35,7 @@ async (req , res) => {
        let user = await User.findOne({email : email});
 
        if(user){// if user exits then it is a bad request
-        res.status(400).json({errors : [{msg : "User already exits"}]});
+        return res.status(400).json({errors : [{msg : "User already exits"}]});
        }
 
        const avatar = gravatar.url(email , {
