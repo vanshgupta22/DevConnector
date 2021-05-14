@@ -336,6 +336,8 @@ router.delete("/education/:edu_id" , auth , async (req ,res) => {
 
 router.delete("/github/:username" , async (req ,res) => {
 
+    // @todo debug this part -------------------
+
     try {
         
         const options = {
