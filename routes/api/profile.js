@@ -336,7 +336,6 @@ router.delete("/education/:edu_id" , auth , async (req ,res) => {
 
 router.get("/github/:username" , async (req ,res) => {
 
-    // @todo debug this part -------------------
 
     try {
         
