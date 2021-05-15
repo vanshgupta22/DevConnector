@@ -334,9 +334,8 @@ router.delete("/education/:edu_id" , auth , async (req ,res) => {
 // @desc  Get github repos
 // @access Public
 
-router.delete("/github/:username" , async (req ,res) => {
+router.get("/github/:username" , async (req ,res) => {
 
-    // @todo debug this part -------------------
 
     try {
         
