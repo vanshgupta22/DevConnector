@@ -10,10 +10,8 @@ import {
 export const getCurrentProfile = () => async dispatch => {
     try {
 
-        console.log("i hate it");
 
         const res = await axios.get('/api/profile/me');
-        console.log('i love it');
 
         dispatch({
             type : GET_PROFILE,
